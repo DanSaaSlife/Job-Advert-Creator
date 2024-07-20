@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Job Advert Creator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Automated Job Advert Creator</h1>
+        <form id="jobForm">
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" required>
+
+            <label for="companyWebsite">Company Website:</label>
+            <input type="url" id="companyWebsite" name="companyWebsite" required>
+
+            <label for="emailAddress">Email Address:</label>
+            <input type="email" id="emailAddress" name="emailAddress" required>
+
+            <label for="jobSpec">Upload Job Specification:</label>
+            <input type="file" id="jobSpec" name="jobSpec" accept=".txt,.doc,.docx,.pdf" required>
+
+            <button type="button" id="createAdvertButton">Create Advert</button>
+        </form>
+        <div id="jobAdvert" class="hidden">
+            <h2>Generated Job Advert</h2>
+            <textarea id="advertContent" readonly></textarea>
+        </div>
+    </div>
+</body>
+</html>
